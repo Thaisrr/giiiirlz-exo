@@ -1,0 +1,39 @@
+.Nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.Nav ul {
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    padding-left: 0;
+    gap: 30px;
+    height: 100%;
+    width: var(--width);
+    margin: auto;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: var(--secondary);
+    font-size: 1.1em;
+    padding: 5px 0;
+    position: relative;
+}
+
+.Nav a:link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 0;
+    background-color: var(--secondary);
+    transition: width .5s;
+}
+
+.Nav a:link:hover:after {
+    width: 100%;
+}

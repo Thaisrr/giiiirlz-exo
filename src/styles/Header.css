@@ -1,0 +1,40 @@
+.Header {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+}
+
+.Header .img-container {
+    width: 40%;
+    min-width: 400px;
+    max-width: 90vw;
+}
+
+.Header h1 {
+    width: fit-content;
+
+}
+
+.Header h1 span {
+    position: relative;
+}
+
+.Header h1 span:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 50%;
+    clip-path: polygon(5% 1%, 100% 0%, 95% 100%, 0% 100%);
+    background-color: var(--tertiary-lighter);
+    position: absolute;
+    bottom: 0%;
+    left: -5%;
+    z-index: -1;
+    animation: grow .5s ease-in-out forwards;
+}
+
+@keyframes grow {
+    from {width: 0;}
+    to { width: 110%;}
+}
+

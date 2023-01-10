@@ -1,13 +1,54 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Imperial+Script&family=Inter&display=swap');
+
+:root {
+    --dark: #0D1330;
+    --primary: #576CA8;
+    --secondary: #9DC7C8;
+    --light: #e4dfdaff;
+    --tertiary: #fe5f55ff;
+    --tertiary-lighter: #fe5f5566;
+    --width: 80%;
+
+    --main-font: "Inter", sans-serif;
+    --title-font: "Comfortaa", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {box-sizing: border-box}
+body {
+    background-color: var(--dark);
+    color: var(--light);
+    font-family: var(--main-font);
+}
+
+h1, h2, h3, a, button, label {
+    font-family: var(--title-font);
+}
+
+h2 {
+    color: var(--secondary);
+}
+
+.centered {
+    width: var(--width);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.img-container {
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+}
+
+.img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
