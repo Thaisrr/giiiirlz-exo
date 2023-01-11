@@ -32,6 +32,10 @@ const Home = () => {
             <Header/>
             <section>
               <h2>Tous mes shows</h2>
+                {
+                    (shows?.length)?  <Movies/> : <p>Rien à afficher</p>
+                    //(shows && shows.length)?  <Movies/> : <p>Rien à afficher</p>
+                }
                 <Movies/>
             </section>
         </main>
