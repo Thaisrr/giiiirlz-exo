@@ -1,29 +1,16 @@
 import Header from "../layout/Header";
 import {Show} from "../utils/types/Show";
 import movies from "../utils/const/Shows";
+import MovieCard from "../layout/MovieCard";
+import {useState} from "react";
 
 const Home = () => {
-    //const shows = ['Movie 1', 'Movie 2', 'Movie 3'];
-    const shows: Show[] = movies;
+    const [shows, setShows] = useState<Show[]>(movies);
+    // setShows( liste_shows ) : pour changer les films à afficher
 
     const Movies = () => (
         <div className='grid'>
-            {shows.map((show) => (
-                <div key={show.id} className='card'>
-                    <div className='card-image img-container'>
-                        <img src={show.poster} alt={show.title} />
-                    </div>
-                    <div className='text'>
-                        <h3>{show.title}</h3>
-                        <div className="infos">
-                            <p>{show.duration}min</p>
-                            <p>{show.year}</p>
-                            <p>{show.director}</p>
-                            {show.seasons && <p>{show.seasons} seasons</p>}
-                        </div>
-                    </div>
-                </div>
-            ))}
+            {shows.map((show) => (<MovieCard key={show.id} show={show}/>))}
         </div>
     );
 
@@ -36,7 +23,6 @@ const Home = () => {
                     (shows?.length)?  <Movies/> : <p>Rien à afficher</p>
                     //(shows && shows.length)?  <Movies/> : <p>Rien à afficher</p>
                 }
-                <Movies/>
             </section>
         </main>
     )

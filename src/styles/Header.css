@@ -1,18 +1,20 @@
 .Header {
     display: flex;
-    flex-flow: wrap row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    gap: 60px;
+    align-items: center;
+    position: relative;
 }
 
 .Header .img-container {
     width: 40%;
+    height: 100%;
     min-width: 400px;
     max-width: 90vw;
 }
 
 .Header h1 {
     width: fit-content;
-
 }
 
 .Header h1 span {
@@ -27,7 +29,7 @@
     clip-path: polygon(5% 1%, 100% 0%, 95% 100%, 0% 100%);
     background-color: var(--tertiary-lighter);
     position: absolute;
-    bottom: 0%;
+    bottom: 0;
     left: -5%;
     z-index: -1;
     animation: grow .5s ease-in-out forwards;

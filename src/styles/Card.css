@@ -1,0 +1,31 @@
+.Card {
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 5%;
+}
+
+
+.Card h3 {
+    margin-bottom: 20px;
+}
+
+.Card .img-container {border-radius: 4px}
+
+.Card .infos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: var(--secondary);
+}
+
+.Card .director {
+    color: var(--secondary);
+}
+
+.Card .director:before {
+    content: '—';
+    padding-right: 3px;
+}
+
+.Card:hover {
+    background-color: var(--primary);
+}
