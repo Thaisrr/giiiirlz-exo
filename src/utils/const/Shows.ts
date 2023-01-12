@@ -7,7 +7,7 @@ const movies: Show[] = [
         year: 2004,
         director: 'Edgar Wright',
         poster: 'https://images-na.ssl-images-amazon.com/images/S/pv-target-images/91005cc6ae8d9294f275f0c8fb606dc79d8e1fb936b032c913647417af60bb7d._UY500_UX667_RI_V_TTW_.jpg',
-        is_watched: false,
+        is_watched: true,
         duration: 99,
         type: 'movie'
     },
@@ -17,7 +17,7 @@ const movies: Show[] = [
         year: 2007,
         director: 'Edgar Wright',
         poster: 'https://images-na.ssl-images-amazon.com/images/S/pv-target-images/319da0632ab6f42ba95cf39a637717d9035adaf7e620f3fb3a9072980f8d25f3._UY500_UX667_RI_V_TTW_.jpg',
-        is_watched: false,
+        is_watched: true,
         duration: 99,
         type: 'movie'
     },
