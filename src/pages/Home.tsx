@@ -18,6 +18,13 @@ const Home = () => {
         }
     }
 
+    const search = (e: any) => {
+        const input = e.target as HTMLInputElement;
+        const search_value = input.value.trim().toLowerCase();
+        const result = movies.filter(movie => movie.title.trim().toLowerCase().includes(search_value));
+        setShows(result);
+    }
+
     const Movies = () => (
         <div className='grid'>
             {shows.map((show) => (<MovieCard key={show.id} show={show}/>))}
@@ -30,6 +37,7 @@ const Home = () => {
             <section>
               <h2>Tous mes shows</h2>
                 <div className='btn-container'>
+                    <input onInput={(e) => search(e)}/>
                     <button onClick={() => filterMovies("ALL")}>All</button>
                     <button onClick={() => filterMovies("WATCHED")}>Vus</button>
                     <button onClick={() => filterMovies("NOT")}>Pas Vus</button>
